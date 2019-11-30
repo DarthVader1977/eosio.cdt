@@ -10,6 +10,7 @@
 #include <eosio/system.h>
 #include <eosio/transaction.h>
 #include <eosio/types.h>
+#include <eosio/random_number.h>
 
 #include <type_traits>
 
@@ -154,7 +155,8 @@ intrinsic_macro(send_inline) \
 intrinsic_macro(send_context_free_inline) \
 intrinsic_macro(send_deferred) \
 intrinsic_macro(cancel_deferred) \
-intrinsic_macro(get_context_free_data) 
+intrinsic_macro(get_context_free_data) \
+intrinsic_macro(random_number)
 
 #define CREATE_ENUM(name) \
    name,
