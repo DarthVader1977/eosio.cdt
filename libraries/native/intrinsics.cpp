@@ -8,6 +8,7 @@
 #include <eosio/system.h>
 #include <eosio/transaction.h>
 #include <eosio/types.h>
+#include <eosio/random.h>
 #include "native/eosio/intrinsics.hpp"
 #include "native/eosio/crt.hpp"
 #include <softfloat.hpp>
@@ -16,6 +17,10 @@
 // Boilerplate
 using namespace eosio::native;
 extern "C" {
+
+   int32_t generate_random() {
+       return intrinsics::get().call<intrinsics::generate_random>();
+   }
    void get_resource_limits( capi_name account, int64_t* ram_bytes, int64_t* net_weight, int64_t* cpu_weight ) {
       return intrinsics::get().call<intrinsics::get_resource_limits>(account, ram_bytes, net_weight, cpu_weight);
    }

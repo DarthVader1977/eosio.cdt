@@ -159,8 +159,8 @@ intrinsic_macro(send_deferred) \
 intrinsic_macro(cancel_deferred) \
 intrinsic_macro(get_context_free_data) \
 intrinsic_macro(get_sender) \
-intrinsic_macro(set_action_return_value)\
-intrinsic_macro(random_number)
+intrinsic_macro(set_action_return_value) \
+intrinsic_macro(generate_random)
 
 #define CREATE_ENUM(name) \
    name,

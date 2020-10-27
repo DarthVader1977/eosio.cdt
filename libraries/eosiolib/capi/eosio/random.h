@@ -11,4 +11,6 @@ extern "C" {
 __attribute__((eosio_wasm_import))
 int32_t generate_random();
 
+#ifdef __cplusplus
 }
+#endif
